@@ -82,6 +82,8 @@
                        type: 'error'
                   });
                 } else {
+                    this.$store.commit('increment')
+                    console.log(this.$store.state.count)
                     this.loading2 = true
                     this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=10', {}, {
                           headers: {
